@@ -1,8 +1,16 @@
 # language: en
 Feature: cucu
 
-	Scenario: cucu
+	Scenario Outline: cucu
 		Given I have <mon_produit>
-			| mon produit | prix |
-			| Expresso | 0.40 |
 		Then I log the product <prix>
+
+		@sdf_sdf
+		Examples:
+		| mon_produit | prix |
+		| "café" | 2 |
+
+		@sfd_sfd
+		Examples:
+		| mon_produit | prix |
+		| "ginto" | 10 |
